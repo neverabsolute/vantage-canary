@@ -1,0 +1,11 @@
+# Put this in the canary repo as .github/workflows/canary.yaml. It's the
+# "very simple action" the git transaction waits for: it does nothing but pass.
+name: canary
+on: push
+permissions: {}
+jobs:
+  ok:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: echo ok
